@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class Farmer:public Person {
+class Farmer:virtual public Person {
 public:
 	Farmer(string name = "Jack", string color = "blue") : Person("Farmer" + color) {
 		cout << "Farmer" << endl;

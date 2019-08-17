@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class Worker : public Person {
+class Worker : virtual public Person {
 
 public:
 	Worker(string code = "001", string color = "blue"):Person("Worker" + color) {
