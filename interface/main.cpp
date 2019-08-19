@@ -1,13 +1,23 @@
 #include <iostream>
+#include <typeinfo>
 #include "Plane.h"
 #include "Bird.h"
+
 
 using namespace std;
 
 namespace muke {
 	void testFunc(Flyable *f) {
-		if(f != NULL)
+		if(f != NULL) {
 			f->fly(true);
+			cout << typeid(*f).name() << endl;
+			if(typeid(*f) == typeid(Bird)) {
+				Bird *bird = dynamic_cast<Bird *>(f);
+				if(bird != NULL) {
+					bird->eat();
+				}
+			}
+		}
 	}
 }
 

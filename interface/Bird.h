@@ -15,6 +15,10 @@ class Bird: public Flyable {
 		void fly(bool able) {
 			cout << "The bird is flying" << endl;
 		}
+
+		void eat() {
+			cout << "Bird's eating" << endl;
+		}
 };
 #endif
 
