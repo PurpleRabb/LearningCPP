@@ -1,4 +1,6 @@
 #include <iostream>
+#include "T_Array.h"
+
 using namespace std;
 
 //模板函数
@@ -27,7 +29,7 @@ void display(T a, S b) {
 }
 
 int main() {
-	cout << t_max<int>(1,2) << endl;
+	/*cout << t_max<int>(1,2) << endl;
 	cout << t_max(1.0,2.0) << endl;
 	cout << t_max('c','b') << endl;
 
@@ -43,6 +45,9 @@ int main() {
 
 	display<int,10>(6);
 	display<int,double>(10,2.6);
-	cout << cx << endl;
+	cout << cx << endl;*/
+
+	T_ARRAY<int,5,1> arr;
+	arr.display();
 }
 
