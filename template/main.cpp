@@ -14,8 +14,20 @@ void T_swap(T &t1, T &t2) {
 	t2 = temp;
 }
 
+template <typename T,int size> //可以带参数
+void display(T a) {
+	for(int i=0;i < size; i++)
+		cout << a;
+	cout << endl;
+}
+
+template <typename T,typename S>
+void display(T a, S b) {
+	cout << "T:" << a << "S:" << b << endl;
+}
+
 int main() {
-	cout << t_max(1,2) << endl;
+	cout << t_max<int>(1,2) << endl;
 	cout << t_max(1.0,2.0) << endl;
 	cout << t_max('c','b') << endl;
 
@@ -28,6 +40,9 @@ int main() {
 	char cx = 'a';
 	char cy = 'b';
 	T_swap(cx,cy);
+
+	display<int,10>(6);
+	display<int,double>(10,2.6);
 	cout << cx << endl;
 }
 
